@@ -3,11 +3,23 @@ package dev.krishvora09;
 public class Alien {
 
     private int age;
-    private Laptop lap;
+//    private Laptop lap;
+    private Computer comp;
 
     public Alien() {
         System.out.println("Object Created");
     }
+
+//    public Alien(int age) {
+//        System.out.println("Parameterized Constructor Called!");
+//        this.age = age;
+//    }
+
+//    @ConstructorProperties({"age", "lap"})
+//    public Alien(int age, Computer comp) {
+//        this.age = age;
+//        this.comp = comp;
+//    }
 
     public int getAge() {
         return age;
@@ -18,17 +30,17 @@ public class Alien {
         this.age = age;
     }
 
-    public Laptop getLap() {
-        return lap;
+    public Computer getComp() {
+        return comp;
     }
 
-    public void setLap(Laptop lap) {
-        this.lap = lap;
+    public void setComp(Computer comp) {
+        this.comp = comp;
     }
 
     public void code() {
         System.out.println("Coding");
-        lap.compile();
+        comp.compile();
     }
 
 }
