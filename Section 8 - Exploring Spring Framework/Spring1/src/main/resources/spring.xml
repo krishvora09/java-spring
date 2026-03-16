@@ -3,30 +3,45 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!--    <bean id="alien1" class="dev.krishvora09.Alien" scope="prototype">-->
-<!--    </bean>-->
+    <!--    <bean id="alien1" class="dev.krishvora09.Alien" scope="prototype">-->
+    <!--    </bean>-->
 
-<!--    <bean id="alien2" class="dev.krishvora09.Alien">-->
-<!--    </bean>-->
+    <!--    <bean id="alien2" class="dev.krishvora09.Alien">-->
+    <!--    </bean>-->
 
-    <bean id="alien1" class="dev.krishvora09.Alien">
-<!--        <property name="age" value="21"></property>-->
-<!--        <property name="lap" ref="lap1"/>-->
+    <bean id="alien1" class="dev.krishvora09.Alien" autowire="byName">
+        <!--        <property name="age" value="21"></property>-->
+        <!--        <property name="lap" ref="lap1"/>-->
 
-<!--        <constructor-arg value="21"/>-->
-<!--        <constructor-arg ref="lap1"/>-->
+        <!--        <constructor-arg value="21"/>-->
+        <!--        <constructor-arg ref="lap1"/>-->
 
-<!--        <constructor-arg type="dev.krishvora09.Laptop" ref="lap1"/>-->
-<!--        <constructor-arg type="int" value="21"/>-->
+        <!--        <constructor-arg type="dev.krishvora09.Laptop" ref="lap1"/>-->
+        <!--        <constructor-arg type="int" value="21"/>-->
 
-<!--        <constructor-arg index="1" ref="lap1"/>-->
-<!--        <constructor-arg index="0" value="21"/>-->
+        <!--        <constructor-arg index="1" ref="lap1"/>-->
+        <!--        <constructor-arg index="0" value="21"/>-->
 
-        <constructor-arg name="lap" ref="lap1"/>
-        <constructor-arg name="age" value="21"/>
+        <!--        <constructor-arg name="lap" ref="lap1"/>-->
+        <!--        <constructor-arg name="age" value="21"/>-->
+
+        <property name="age" value="21"></property>
+<!--        <property name="comp" ref="lap1"/>-->
+<!--        <property name="comp" ref="comp"/>-->
+
+        <property name="comp">
+            <bean id="comp" class="dev.krishvora09.Laptop" primary="true">
+            </bean>
+        </property>
     </bean>
 
-    <bean id="lap1" class="dev.krishvora09.Laptop">
-    </bean>
+<!--    <bean id="lap1" class="dev.krishvora09.Laptop">-->
+<!--    </bean>-->
+
+<!--    <bean id="comp" class="dev.krishvora09.Laptop" primary="true">-->
+<!--    </bean>-->
+
+<!--    <bean id="comp1" class="dev.krishvora09.Desktop" lazy-init="true">-->
+<!--    </bean>-->
 
 </beans>

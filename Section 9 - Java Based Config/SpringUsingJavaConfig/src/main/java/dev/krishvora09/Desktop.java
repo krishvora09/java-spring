@@ -1,5 +1,12 @@
 package dev.krishvora09;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component("com2")
+@Primary
+@Scope("prototype")
 public class Desktop implements Computer{
 
     public Desktop() {
