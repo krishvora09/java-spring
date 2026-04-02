@@ -1,0 +1,45 @@
+body {
+    background: linear-gradient(135deg, #007bff, #6610f2);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container for boxes */
+.oval-box-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+/* Oval Cards */
+.oval-box {
+    width: 260px;
+    height: 160px;
+    background: linear-gradient(45deg, #343a40, #495057);
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.oval-box:hover {
+    transform: translateY(-8px) scale(1.05);
+    background: linear-gradient(45deg, #0d6efd, #6610f2);
+}
+
+/* Text inside */
+.oval-box h3 {
+    font-weight: 600;
+}
+
+.oval-box p {
+    font-size: 14px;
+    opacity: 0.8;
+}

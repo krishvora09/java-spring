@@ -1,4 +1,4 @@
-package dev.krishvora09.SpringBootWeb1;
+package dev.krishvora09.SpringMVC1;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
